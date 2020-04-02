@@ -10,7 +10,8 @@ public class Runner {
     private static final String MESSAGE_PATTERN = """
             Good Morning mr. %s
             You old pattern here
-            add something new""";
+            add something new
+        """;
 
     public static void main(String[] args) {
         final Person uladzimir = new Person("Uladzimir", 28, WOW);
