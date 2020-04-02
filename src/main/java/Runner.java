@@ -7,8 +7,10 @@ import static java14.Person.Mood.BAD;
 import static java14.Person.Mood.WOW;
 
 public class Runner {
-    private static final String MESSAGE_PATTERN = "Good Morning mr. %s\n" +
-            "You old pattern here";
+    private static final String MESSAGE_PATTERN = """
+            Good Morning mr. %s
+            You old pattern here
+            add something new""";
 
     public static void main(String[] args) {
         final Person uladzimir = new Person("Uladzimir", 28, WOW);
