@@ -17,7 +17,7 @@ package java14;
  * We can override any methods (hashcode, equals, toString) and so on
  * But we cannot to use extends
  */
-public record Person(String name, int age) {
+public record Person(String name, int age, Mood mood) {
     private static final int DEFAULT_AGE = 28;
 
     /**
@@ -32,7 +32,7 @@ public record Person(String name, int age) {
 
 
     public Person(final String name) {
-        this(name, DEFAULT_AGE);
+        this(name, DEFAULT_AGE, Mood.HAPPY);
     }
 
     /**
@@ -44,5 +44,9 @@ public record Person(String name, int age) {
         if (age < 0) {
             throw new IllegalArgumentException("Invalid age " + age);
         }
+    }
+
+    public enum Mood {
+        HAPPY, SAD, BAD, OK, WOW
     }
 }
