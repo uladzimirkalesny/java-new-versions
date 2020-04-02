@@ -3,16 +3,15 @@ import java14.Person;
 import java.util.Arrays;
 import java.util.Locale;
 
-import static java.util.Arrays.asList;
 import static java14.Person.Mood.BAD;
-import static java14.Person.Mood.HAPPY;
-import static java14.Person.Mood.OK;
-import static java14.Person.Mood.SAD;
 import static java14.Person.Mood.WOW;
 
 public class Runner {
+    private static final String MESSAGE_PATTERN = "Good Morning mr. %s\n" +
+            "You old pattern here";
+
     public static void main(String[] args) {
-        final Person uladzimir = new Person("Uladzimir", 28, HAPPY);
+        final Person uladzimir = new Person("Uladzimir", 28, WOW);
         System.out.println(uladzimir.getClass().isRecord()); // true
         System.out.println(Arrays.toString(uladzimir.getClass().getRecordComponents())); // [java.lang.String name, int age]
         System.out.println(uladzimir);
@@ -33,6 +32,7 @@ public class Runner {
 
     /**
      * New switch expression
+     *
      * @param somebody
      */
     private static void sayHello(final Object somebody) {
@@ -45,7 +45,7 @@ public class Runner {
                 case HAPPY, OK -> "Yo!";
                 case WOW -> {
                     final String name = person.name().toUpperCase(Locale.ENGLISH);
-                    yield "Hi, " + name;
+                    yield MESSAGE_PATTERN.formatted(name);
                 }
             };
         } else {
