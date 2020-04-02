@@ -58,4 +58,11 @@ public class Runner {
         }
         System.out.println(message);
     }
+
+    /*
+     * -XX:+UseConcMarkSweepGC was removed from java 14
+     * -XX:+UseParallelGC was deprecated from java 14
+     * -XX:+UseParallelOldGC was deprecated from java 14
+     * -XX:+UnlockExperimentalVMOptions -XX:+UseZGC new GC from java 11, but java 14 gave us windows and macOS support
+     */
 }
