@@ -7,6 +7,8 @@ import static java14.Person.Mood.BAD;
 import static java14.Person.Mood.WOW;
 
 public class Runner {
+    //language=SQL
+    private static final String SQL = "select * from table where id > 2";
     private static final String MESSAGE_PATTERN = """
             Good Morning mr. %s
             You old pattern here
