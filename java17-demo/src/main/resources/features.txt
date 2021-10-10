@@ -1,0 +1,6 @@
++ add :
+RandomGenerator class
+ARM64 architecture (linux, mac, windows)
+
+-delete :
+applets, security manager
